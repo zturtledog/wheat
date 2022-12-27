@@ -5,5 +5,3 @@ ${
         "Hello, World!" .print
     } ~tt i .loop
 } hello () .function
-
-{} :obj: .cast .hello .drop
