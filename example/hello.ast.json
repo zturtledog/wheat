@@ -1,0 +1,59 @@
+[
+  { "type": "dollar", "raw": "$", "value": "$", "line": 1, "col": 0 },
+  {
+    "type": "block",
+    "value": [
+      { "type": "word", "raw": "tt", "value": "tt", "line": 2, "col": 5 },
+      { "type": "number", "raw": "23", "value": "23", "line": 2, "col": 8 },
+      {
+        "type": "call",
+        "raw": ".const",
+        "value": ".const",
+        "line": 2,
+        "col": 11
+      },
+      { "type": "dollar", "raw": "$", "value": "$", "line": 3, "col": 5 },
+      {
+        "type": "block",
+        "value": [
+          {
+            "type": "string",
+            "raw": "\"Hello, World!\"",
+            "value": "Hello, World!",
+            "line": 4,
+            "col": 9
+          },
+          {
+            "type": "call",
+            "raw": ".print",
+            "value": ".print",
+            "line": 4,
+            "col": 23
+          }
+        ],
+        "line": 3,
+        "constructor": { "name": "block" }
+      },
+      { "type": "word", "raw": "tt", "value": "tt", "line": 5, "col": 7 },
+      { "type": "word", "raw": "i", "value": "i", "line": 5, "col": 10 },
+      { "type": "call", "raw": ".loop", "value": ".loop", "line": 5, "col": 12 }
+    ],
+    "line": 1,
+    "constructor": { "name": "block" }
+  },
+  { "type": "word", "raw": "hello", "value": "hello", "line": 6, "col": 3 },
+  {
+    "type": "parameter",
+    "value": [],
+    "line": 6,
+    "constructor": { "name": "parameter" }
+  },
+  {
+    "type": "call",
+    "raw": ".function",
+    "value": ".function",
+    "line": 6,
+    "col": 12
+  },
+  { "type": "call", "raw": ".hello", "value": ".hello", "line": 8, "col": 1 }
+]
