@@ -39,7 +39,7 @@ const rules = {
         ["newline", /\r?\n/],
         ["whitespace", /\s|\t/],
         //word
-        ["pointer", /\*[a-zA-Z_]+/],
+        ["pointer", /~[a-zA-Z_]+/],
         ["word", /[a-zA-Z_]+/],
     ],
 

@@ -1,0 +1,25 @@
+{
+  "name": "wheat-syntax",
+  "displayName": "wheat_syntax",
+  "description": "wheat syntax hilighter",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.74.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "wheat",
+      "aliases": ["wheat", "wheat"],
+      "extensions": ["wheat","wht"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "wheat",
+      "scopeName": "source.wheat",
+      "path": "./syntaxes/wheat.tmLanguage.json"
+    }]
+  }
+}

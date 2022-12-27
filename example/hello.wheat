@@ -3,7 +3,7 @@ ${
     23 tt .const   #define a varible
     ${
         "Hello, World!" .print
-    } tt i .loop
+    } ~tt i .loop
 } hello () .function
 
-.hello
+{} :obj: .cast .hello .drop

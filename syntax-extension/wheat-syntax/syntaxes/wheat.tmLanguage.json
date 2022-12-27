@@ -1,0 +1,89 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "name": "wheat",
+  "patterns": [
+    {
+      "include": "#strings"
+    },
+    {
+      "include": "#orange"
+    },
+    {
+      "include": "#comment"
+    },
+    {
+      "include": "#call"
+    },
+    {
+      "include": "#operator"
+    },
+    {
+      "include": "#pointer"
+    },{
+		"include": "#type"
+	}
+  ],
+  "repository": {
+    "comment": {
+      "patterns": [
+        {
+          "name": "comment",
+          "match": "#.*"
+        }
+      ]
+    },
+	"type": {
+		"patterns": [
+		  {
+			"name": "storage.type",
+			"match": ":[a-zA-Z_]+:"
+		  }
+		]
+	  },
+    "pointer": {
+      "patterns": [
+        {
+          "name": "constant",
+          "match": "~[a-zA-Z_]+"
+        }
+      ]
+    },
+    "call": {
+      "patterns": [
+        {
+          "name": "support.function",
+          "match": "\\.[a-zA-Z_]+"
+        }
+      ]
+    },
+    "strings": {
+      "name": "string.quoted.double.wheat",
+      "begin": "\"",
+      "end": "\"",
+      "patterns": [
+        {
+          "name": "constant.character.escape.wheat",
+          "match": "\\\\."
+        }
+      ]
+    },
+    "orange": {
+      "patterns": [{
+        "name": "constant.numeric",
+        "match": "0x-?(?:0|[1-9][0-9][a-f]*)\\.?(?:0|[1-9][0-9][a-f]*)?"
+      }, {
+        "name": "constant.numeric",
+        "match": "-?(?:0|[1-9][0-9]*)\\.?(?:0|[1-9][0-9]*)?"
+      }]
+    },
+    "operator": {
+      "patterns": [
+        {
+          "name": "constant.numeric",
+          "match": "\\+|-|(\\*)|/|(\\|\\|)|(&&)|%|(\\^\\^)"
+        }
+      ]
+    }
+  },
+  "scopeName": "source.wheat"
+}
