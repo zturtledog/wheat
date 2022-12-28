@@ -1,4 +1,5 @@
 import { std_lib } from "./std_lib.js";
+import * as pretty from "./pretty.js"
 
 export function run(tkns) {
     const vartac = {};
@@ -39,11 +40,16 @@ export const cycle = (tks, stack, vartac, ddl) => {
                     if (temp.stack) stack = temp.stack
                     if (temp.ddl != undefined) ddl = temp.ddl
                 }
+            } else {
+                console.log(pretty.assemble("/@c;/red//>b/error/*r/: function undefined\n  token: ")+stringify(tks[i]))
             }
         } else {
             //todo: more specific pushing
             if (tks[i]) {
-                stack.push(tks[i])
+                stack.push({
+                    type:tks[i].type,
+                    value:tks[i].value
+                })
             }
         }
         
@@ -71,4 +77,8 @@ function typ(vl) {
             console.log(vl[i])
     }
     return str + "]"
+}
+
+function stringify(token) {
+    return pretty.assemble("/*n/    type: /@c;/blue/"+token.type+"/*r/*n/    val: /@c;/green/"+token.value+"/*r/*n/    ln: /@c;/orange/"+token.line+"/*r/*n/    col: /@c;/orange/"+token.col+"/*r/")
 }

@@ -33,7 +33,7 @@ const rules = {
         //type
         ["type", /:[a-zA-Z_]+:/],
         //number
-        ["hex-number", /0x-?(?:0|[1-9][0-9][a-f]*)\.?(?:0|[1-9][0-9][a-f]*)?/],
+        ["hex-number", /0x-?(0|[1-9]|[0-9]|[a-f]|[A-F])+/],//0x-43fF4
         ["number", /-?(?:0|[1-9][0-9]*)\.?(?:0|[1-9][0-9]*)?/],
         //nl
         ["newline", /\r?\n/],
@@ -47,6 +47,15 @@ const rules = {
         string: (inp) => {
             return inp.slice(1, -1);
         },
+        number: (inp) => {
+            return parseFloat(inp)
+        },
+        "hex-number": (inp) => {
+            return parseInt(inp.slice(2),16)
+        },
+        pointer: (inp) => {
+            return inp.slice(1)
+        }
     },
 
     blocks: [

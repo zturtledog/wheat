@@ -5,4 +5,7 @@ standardized sai
     type casting
     block differentiation 
 
-        
+@type-def
+    defining types
+    obj literals
+    casting litterals        

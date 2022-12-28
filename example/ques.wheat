@@ -1,0 +1,14 @@
+"./gro.lst" .load_file data .get file .const # load file into a varible
+file "\r?\n" .split lines .const # split lines
+
+:string: out .const
+
+:string: line .const
+:string: res .const
+${
+    lines i .at line .set
+    line .console_prompt res .set
+    out line ": " + res + "\n" + + out .set
+} lines .length i .loop
+
+out "./response.lst" .save_file

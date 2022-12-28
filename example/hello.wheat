@@ -1,7 +1,9 @@
-.stackprint
+# .debug
 ${
     23 tt .const   #define a varible
     ${
         "Hello, World!" .print
     } tt i .loop
 } hello () .function
+
+.hello

@@ -1,11 +1,20 @@
 export const reset = "\x1b[0m"
+
 export const lnup = "\x1b[F"
+
+export const bold = "\x1b[1m"
+export const italic = "\x1b[3m"
+export const underline = "\x1b[4m"
+export const invert = "\x1b[7m"
+export const strikethrough = "\x1b[9m"
+// export const p = "\x1b[4m"
 
 export const fg = {
     black:"\x1b[30m",
     red: "\x1b[31m",
     green: "\x1b[32m",
     yellow: "\x1b[33m",
+    orange: rgb_fore(251, 191, 119),
     blue: "\x1b[34m",
     magenta: "\x1b[35m",
     cyan: "\x1b[36m",
@@ -22,6 +31,7 @@ export const bg = {
     magenta : "\x1b[45m",
     cyan : "\x1b[46m",
     white : "\x1b[47m",
+    orange: rgb_back(251, 191, 119),
     grey : rgb_back(69, 67, 74)
 }
 
@@ -56,6 +66,11 @@ export function assemble(src) {
         else if (data[i] == "slsh") {
             text+="/"
         }
+        else if (data[i] == ">b") {text += bold}
+        else if (data[i] == ">i") {text += italic}
+        else if (data[i] == ">u") {text += underline}
+        else if (data[i] == ">x") {text += invert}
+        else if (data[i] == ">s") {text += strikethrough}
         else if (data[i] == "@cl") {//change text color
             const ght = parse_hex(data[i+1])
 
