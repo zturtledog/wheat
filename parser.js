@@ -16,7 +16,10 @@ const rules = {
             /\+/, /-/,
             /\*/, /\//,
             /\|\|/, /&&/,
-            /%/, /\^\^/]],
+            /%/, /\^\^/, 
+            /</, />/, 
+            /<</, />>/, 
+            /==/, /!=/]],
         //comma
         ["comma",/,/],
         //cpartalism
@@ -146,3 +149,13 @@ function remw(tks) {
 //     }
 // }
 
+/**
+ * function parse_order(sop) {
+ *     const stf = sop.split(" ")
+ *     retrun {
+ *         unit_type:stf[0],
+ *         move:stf[2],
+ *         current:stf[1],
+ *     }
+ * }
+ */

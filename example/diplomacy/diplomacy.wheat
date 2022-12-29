@@ -1,8 +1,17 @@
 "./list.wheat" lst .import
 
 ${
-    .dup .lowercase # duplicate the top of the stack and lowercase it #
+    .lowercase # lowercase the parameter #
     " " .split # returns an array
+
+    # assurances
+    ${
+        "/@c;/yellow//>b/warning: /*r/order not executable" .pretty_print # print an error
+        .drop .return # stack  >>  [array] -> [] -> x
+    } .length 2 < .if # if array.length < 2
+
+    # get at three
+    
 } parse_move (:string:) .function
 
 "a mos - stp" .parse_move .print
