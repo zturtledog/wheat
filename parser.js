@@ -23,6 +23,8 @@ const rules = {
         //assort
         ["cropen", /\{/],
         ["crclose", /\}/],
+        ["blopen", /\[/],
+        ["blclose", /\]/],
         ["propen", /\(/],
         ["prclose", /\)/],
         //i1-mod
@@ -60,6 +62,7 @@ const rules = {
 
     blocks: [
         ["cropen", "crclose", "block"],
+        ["blopen", "blclose", "array"],
         ["propen", "prclose", "parameter"],
     ],
 
@@ -70,6 +73,16 @@ const rules = {
 
     blockcallback:{
         block: (tkns) => remw(tkns),
+        array: (tkns) => {
+            for (let i = 0; i < tkns.length; i++) {
+                if (tkns[i]) {
+                    tkns[i] = {
+                        type:tkns[i].type,
+                        value:tkns[i].value
+                    }
+                }
+            }
+        },
         parameter: (tkns)=>{
             const rns = []
             for (let i = 0; i < tkns.length; i++) {
