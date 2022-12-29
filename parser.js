@@ -4,7 +4,8 @@ import * as reparse from "https://deno.land/x/reparse@v0.02-5/reparse.js";
 const rules = {
     match: [
         //comment
-        ["comment", /#.*/],
+        // ["comment", /#.*/],
+        ["comment",/[#](?:\\[#\\]|[^\n#\\])*[#|\n]/],
         //string
         ["string", [
             /['](?:\\['\\]|[^\n'\\])*[']/,

@@ -1,1 +1,11 @@
-"./list.wheat"
+"./list.wheat" lst .import
+
+${
+    .dup .lowercase # duplicate the top of the stack and lowercase it #
+    " " .split # returns an array
+} parse_move (:string:) .function
+
+"a mos - stp" .parse_move .print
+"a mos s stp - bot" .parse_move .print
+"f bar c stp - nwy" .parse_move .print
+"a mos holds" .parse_move .print

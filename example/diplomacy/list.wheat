@@ -1,9 +1,95 @@
-.array list .const
+[] list .const
 
 {
     short "",
     long "",
-    connections []
+    connections [
+
+    ]
 } list .push
+
+# boh
+# bud
+# gal
+# tri
+# tyr
+# vie
+
+# cly
+# edi
+# lvp
+# lon
+# wal
+# yor
+
+# bre
+# bur
+# gas
+# mar
+# par
+# pic
+
+# bre
+# kie
+# mun
+# pru
+# ruh
+# sil
+
+# apu
+# nap
+# pie
+# rom
+# tus
+# ven
+
+# fin
+# lvn
+# mos
+# sev
+# stp
+# ukr
+# war
+
+# ank
+# arm
+# con
+# smy
+# syr
+
+# alb
+# bel
+# bul
+# den
+# gre
+# hol
+# nwy
+# naf
+# por
+# rum
+# ser
+# spa
+# swe
+# tun
+
+# adr
+# aeg
+# bal
+# bar
+# bla
+# eas
+# eng
+# bot
+# gol
+# hel
+# ion
+# iri
+# mid
+# nat
+# nth
+# nrg
+# ska
+# tyn
+# wes
 
 list .export
